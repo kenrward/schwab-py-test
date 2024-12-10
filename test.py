@@ -1,6 +1,14 @@
 import os
 import schwab
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # Load environment variables from .env
+
+api_key = os.getenv("SCHWAB_API_KEY")
+app_secret = os.getenv("SCHWAB_APP_SECRET")
+
 # Retrieve API credentials from environment variables
 api_key = os.environ.get("SCHWAB_API_KEY")
 app_secret = os.environ.get("SCHWAB_APP_SECRET")
